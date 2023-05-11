@@ -4,7 +4,7 @@ Kerndl*, Vogel*, Komljenovic*, Bausbacher, Riedl, Sango, Oberbichler, Korosec, M
 
 *this authors contributed equally
 
-Medical University of Vienna and University of Vienna, Austria
+Medical University of Vienna, Austria
 
 
 Features
