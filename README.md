@@ -2,7 +2,7 @@
 
 Kerndl*, Vogel*, Komljenovic*, Bausbacher, Riedl, Sango, Oberbichler, Korosec, Musiejovsky, Hofmann, Kieler, Garrido, Brunner, Cairns, Cheng, Kitt, Isaguirre, Köcher, Rattei, Hametner, Hopf, Sheldon, Sharif & Schabbauer 
 
-*this authors contributed equally
+*these authors contributed equally
 
 Medical University of Vienna, Austria
 
