@@ -955,7 +955,7 @@ colnames(means.sc)[3] <- "DiffInMeans"
 IP.SC.wtko <- read.xls("./raw/AVMKe33a_IP_SpTis_PoolSize_wtko.xlsx")
 
 ### exclusion of 465, 464, 491 sample
-IP.SC.reduced <- IP.S.wtko[-which(IP.SC.wtko$core.ID %in% c("465", "464", "491")),]
+IP.SC.reduced <- IP.SC.wtko[-which(IP.SC.wtko$core.ID %in% c("465", "464", "491")),]
 
 
 # 6 replicaets WT, 6 replicates KO
