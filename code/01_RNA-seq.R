@@ -104,21 +104,21 @@ volcano_plot_summary_update <- function(results, title){
     print(levels(as.factor(results$diffexpressed)))
 
     if(length(levels(as.factor(results$diffexpressed)))==3){
-    g <- ggplot(results, aes(x = logFC, y = -log10(adj.P.Val),label = rownames(results),
-        , col=diffexpressed)) +
+        g <- ggplot(results, aes(x = logFC, y = -log10(adj.P.Val),label = rownames(results), col=diffexpressed)) +
             geom_point() +  scale_color_manual(values=c("blue", "gray", "red")) +
             geom_hline(aes(yintercept = -log10(0.05)), linetype = "dashed") +
             labs(x = bquote(~Log[2]~ "fold change"), y = bquote(~-Log[10]~italic(FDR))) +
             theme_bw() + geom_vline(xintercept=c(-1, 1), linetype = "dashed") +
-            ggtitle(title) + geom_text_repel(aes(logFC, -log10(adj.P.Val)),label = ifelse(results$genelabels == TRUE, as.character(results$Gene),""), 
-             box.padding = unit(0.45, "lines"),hjust=1)
-            g2 <- grid.arrange(g,
+            ggtitle(title) + 
+            geom_text_repel(aes(logFC, -log10(adj.P.Val)),label = ifelse(results$genelabels == TRUE, as.character(results$Gene),""), 
+            box.padding = unit(0.45, "lines"),hjust=1)
+            
+         g2 <- grid.arrange(g,
                 bottom = textGrob(title,
                 x = 0.40, y = 1, gp = gpar(fontsize = 9)))
 
-
-
         } else {
+      
           g <- ggplot(results, aes(x = logFC, y = -log10(adj_pval), col=diffexpressed)) +
                   geom_point() +  scale_color_manual(values=c( "gray")) +
                   geom_hline(aes(yintercept = -log10(0.05)), linetype = "dashed") +
@@ -129,7 +129,6 @@ volcano_plot_summary_update <- function(results, title){
           g2 <- grid.arrange(g,
                       bottom = textGrob(title,
                       x = 0.45, y = 1, gp = gpar(fontsize = 9)))
-
 
         }
     # g3 <- g2 + scale_colour_manual(values = mycolors)
