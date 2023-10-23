@@ -44,11 +44,6 @@ dev.off()
 #### in vitro metabolomics
 
 
-
-## heatmap_AVMKE08g_to_anova_signif_AVMKE46c_09Feb2023
-
-
-
 setwd("/Users/andreakomljenovic/Documents/martina/invitrometabolomics/AVMKe08g/")
 
 
