@@ -225,7 +225,7 @@ ff_gobp_highlighted_slc7a2highvsothers$Term <- factor(ff_gobp_highlighted_slc7a2
 
 library(ggplot2)
 pdf("./plots/scRNAseq/Fig4F_fgsea_GOBP_highlighted_Slc7a2_high_vs_othermyeloid.pdf", 15,15)
-### this works, ali nema negativnih enrichment skorova
+### this works, there is no negative enrichment scores
 ggplot(ff_gobp_highlighted_slc7a2highvsothers, aes(Term, NES)) + theme_classic() +
     # scale_fill_brewer("", palette="Paired") +
     geom_bar(position= "identity", stat="identity", width=0.8, fill = c4) +
