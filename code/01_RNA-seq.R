@@ -337,7 +337,7 @@ c4 <- c(rep("indianred1", 10), rep("gray80", 10))
 ff_gobp_highlighted <- cbind(ff_gobp_highlighted, c4)
 
 pdf("./plots/RNAseq/Fig3E_fgsea_GOBP_signif_ordered_16Jan2023_AVMKe27f.pdf", 20,23)
-### this works, ali nema negativnih enrichment skorova
+
 ggplot(ff_gobp_highlighted, aes(Term, NES)) + theme_classic() +
     # scale_fill_brewer("", palette="Paired") +
     geom_bar(position= "identity", stat="identity", width=0.8, fill = c4) +
