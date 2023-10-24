@@ -92,10 +92,10 @@ volcano_plot_summary_update <- function(results, title){
     # add a column of NAs
     results$diffexpressed <- "NOT SIG"
 
-    # if log2Foldchange > 0.5 and pvalue < 0.05, set as "UP"
+    # if log2Foldchange > 1 and pvalue < 0.05, set as "UP"
     results$diffexpressed[results$logFC > 1 & results$adj.P.Val < 0.05] <- "UP"
 
-    # if log2Foldchange < -0.5 and pvalue < 0.05, set as "DOWN"
+    # if log2Foldchange < -1 and pvalue < 0.05, set as "DOWN"
     results$diffexpressed[results$logFC < -1 & results$adj.P.Val < 0.05] <- "DOWN"
 
     ### to change the colors of the legend
