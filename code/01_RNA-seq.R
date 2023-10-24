@@ -252,7 +252,6 @@ c4 <- c(rep("indianred1", 10), rep("gray80", 10))
 ff_reactome_highlighted_v2 <- cbind(ff_reactome_highlighted_v2, c4)
 
 pdf("./plots/RNAseq/Fig3B_fgsea_REACTOME_highlighted.pdf", 10,15)
-### this works, ali nema negativnih enrichment skorova
 ggplot(ff_reactome_highlighted_v2, aes(pathway, NES)) + theme_classic() +
     # scale_fill_brewer("", palette="Paired") +
     geom_bar(position= "identity", stat="identity", width=0.8, fill = c4) +
